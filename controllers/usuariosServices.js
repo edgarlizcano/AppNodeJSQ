@@ -4,8 +4,7 @@ exports.getUsers = function(request, response){
     var sql = "Select * from Usuarios";
     db.executeSql(sql, function(data, err){
         if(err){
-            response.render("error", {codigo: 500, mensaje: err})
-            return err;
+            response.render("error", {codigo: 500, mensaje: err});
         }else{
             response.render("users", {usuarios: data});
         }

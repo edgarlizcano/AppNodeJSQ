@@ -16,7 +16,7 @@ block content
                     td #{user.Nombres}
                     td #{user.Apellidos}
                     td #{user.Email}
-                    td #{user.FechaNacimiento}
+                    td #{moment(user.FechaNacimiento).format("DD-MM-YYYY")}
                     td 
                         a(href="/users/#{user.Id}") 
                             button.btn.btn-primary(type='button') Ver

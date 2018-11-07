@@ -1,6 +1,6 @@
 extends ./layout
 block content
-    h2 Id
+    h2 Id: 
     h4 #{user.Id}
 
     h2 Nombres:
@@ -12,6 +12,9 @@ block content
     h2 Email
     h4 #{user.Email}
 
+    h2 Fecha de Nacimiento
+    h4 #{moment(user.FechaNacimiento).format("DD-MM-YYYY")}
+    br
     a(href="/updateuser/#{user.Id}") 
         button.btn.btn-primary(type='button') Editar
     a(href="/deleteuser/#{user.Id}") 

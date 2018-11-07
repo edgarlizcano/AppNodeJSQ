@@ -4,7 +4,8 @@ var user = require("./controllers/usuariosServices");
 var settings = require("./settings");
 var body_parser = require('body-parser');
 
-var db = require('./db/db');
+app.locals.moment = require("moment");
+
 app.use(body_parser.urlencoded({extended:true}));
 
 app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/'))
