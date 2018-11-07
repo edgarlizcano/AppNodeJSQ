@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+        script(src="/bootstrap/js/bootstrap.min.js")
+        title App Usuarios
+    body
+        header
+            nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+                    a.navbar-brand(href='/') App Usuarios
+                    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+                        span.navbar-toggler-icon
+                    #navbarCollapse.collapse.navbar-collapse
+                        ul.navbar-nav.mr-auto
+                            li.nav-item.active
+                            a.nav-link(href='/')
+                                | Home 
+                                span.sr-only (current)
+                            li.nav-item
+                            a.nav-link(href='/adduser') Agregar Usuario
+                            li.nav-item
+                            a.nav-link(href='/users') Usuarios
+            div.jumbotron.container
+                block content

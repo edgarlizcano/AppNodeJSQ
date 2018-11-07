@@ -1,0 +1,32 @@
+extends ./layout
+block content
+    h1 Editar Usuario
+    form(action='/updateuser' method='post')
+        input(type="hidden", name="id", value= '#{user.Id}')
+        .form-group.row
+            label.col-sm-2.col-form-label(for='nombres') Nombres
+            .col-sm-4
+            input#nombres.form-control(value= '#{user.Nombres}' name='nombres', type='text', placeholder='Nombres')
+        .form-group.row
+            label.col-sm-2.col-form-label(for='apellidos') Apellidos
+            .col-sm-4
+            input#apellidos.form-control(value= '#{user.Apellidos}' name='apellidos' type='text', placeholder='Apellidos')
+        .form-group.row
+            label.col-sm-2.col-form-label(for='email') Email
+            .col-sm-10
+            input#email.form-control(value= '#{user.Email}' name='email' type='email', placeholder='Email')
+        .form-group.row
+            label.col-sm-2.col-form-label(for='fecha') Fecha de Nacimiento
+            .col-sm-10
+            input#fecha.form-control(value= '#{user.FechaNacimiento}' name='fecha' type='date', placeholder='Fecha de Nacimiento')
+        .form-group.row
+            label.col-sm-2.col-form-label(for='inputPassword1') Password
+            .col-sm-10
+            input#inputPassword1.form-control(value= '#{user.Clave}' name='clave' type='password', placeholder='Password')
+        .form-group.row
+            label.col-sm-2.col-form-label(for='inputPassword2') Confirmar Password
+            .col-sm-10
+            input#inputPassword2.form-control(type='password', placeholder='Confirmar Password')
+        .form-group.row
+            .col-sm-10
+            button.btn.btn-primary(type='submit') Guardar

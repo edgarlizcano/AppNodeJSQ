@@ -1,0 +1,26 @@
+extends ./layout
+block content
+    table.table.table-dark
+        thead
+            tr
+                th(scope='col') ID
+                th(scope='col') Nombres
+                th(scope='col') Apellidos
+                th(scope='col') Email
+                th(scope='col') Fecha de Nacimiento
+                th(scope='col') Acciones
+        tbody
+            for user in usuarios
+                tr
+                    th #{user.Id}
+                    td #{user.Nombres}
+                    td #{user.Apellidos}
+                    td #{user.Email}
+                    td #{user.FechaNacimiento}
+                    td 
+                        a(href="/users/#{user.Id}") 
+                            button.btn.btn-primary(type='button') Ver
+                        a(href="/updateuser/#{user.Id}") 
+                            button.btn.btn-primary(type='button') Editar
+                        a(href="/deleteuser/#{user.Id}") 
+                            button.btn.btn-danger(type='button') Borrar

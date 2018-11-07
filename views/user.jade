@@ -1,0 +1,18 @@
+extends ./layout
+block content
+    h2 Id
+    h4 #{user.Id}
+
+    h2 Nombres:
+    h4 #{user.Nombres}
+
+    h2 Apellidos
+    h4 #{user.Apellidos}
+
+    h2 Email
+    h4 #{user.Email}
+
+    a(href="/updateuser/#{user.Id}") 
+        button.btn.btn-primary(type='button') Editar
+    a(href="/deleteuser/#{user.Id}") 
+        button.btn.btn-danger(type='button') Borrar
