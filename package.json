@@ -14,5 +14,8 @@
     "express": "^4.16.4",
     "jade": "^1.11.0",
     "mssql": "^4.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
   }
 }
